@@ -1,0 +1,9 @@
+# Images
+
+allow_images=true
+image_size=64
+
+# Screen
+
+width=35%
+height=50%
