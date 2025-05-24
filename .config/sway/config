@@ -22,7 +22,12 @@ set $term foot
 set $menu wofi --show drun
 
 ### Output configuration
-output * bg ~/Pictures/Wallpapers/leaves-wall.jpg fill
+output * bg ~/Pictures/Wallpapers/great-wave-of-kanagawa-gruvbox.png fill
+
+# Montors
+
+# output HDMI-A-1 mode 1920x1080@99.999Hz
+# output DP-3 mode 2560x1440@179.999Hz
 
 ### Idle configuration
 #
@@ -199,17 +204,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d :wq%X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-	}
+	swaybar_command waybar
 }
 
 xwayland enable
@@ -233,8 +228,8 @@ popup_during_fullscreen smart
 gaps inner 9
 gaps inner 9
 
-# Colour
-client.focused #648F64 #648F64 #ffffff #236F64 #648F64
+# Colour	anon	anon	text?	brdr 2	brdr 1
+client.focused #648F64 #648F64 #ffffff #D79921 #EBDBB2 
 
 
 include /etc/sway/config.d/*
